@@ -1,11 +1,12 @@
-# Lorrin Crazy Eights
+# Dunhuang Sum Blocks
 
-A Dunhuang-styled Crazy Eights card game built with React, Tailwind CSS, and Framer Motion.
+A math puzzle game with Dunhuang aesthetics where you sum blocks to match a target.
 
 ## Features
 
-- **Dunhuang Aesthetic**: Beautiful card designs inspired by Dunhuang murals.
-- **AI Opponent**: Play against a smart AI.
+- **Dunhuang Aesthetic**: Beautiful block designs inspired by Dunhuang murals.
+- **Math Puzzle**: Sum blocks to match the target number.
+- **Two Modes**: Classic Mode (survival) and Time Mode (race against the clock).
 - **Smooth Animations**: Powered by Framer Motion.
 - **Responsive Design**: Works on mobile and desktop.
 
@@ -25,7 +26,6 @@ This project is ready to be deployed to Vercel.
     -   Click "Add New Project".
     -   Import your GitHub repository.
     -   Vercel will automatically detect the Vite framework.
-    -   **Important**: Add your `GEMINI_API_KEY` in the "Environment Variables" section if you plan to use AI features that require it (though the current game logic runs client-side without API calls).
     -   Click "Deploy".
 
 ## Local Development

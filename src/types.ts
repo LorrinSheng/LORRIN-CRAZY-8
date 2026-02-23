@@ -8,7 +8,7 @@ export interface Card {
   value: number; // 8 is special
 }
 
-export type GameState = 'intro' | 'playing' | 'won' | 'lost';
+export type GameState = 'intro' | 'rules' | 'playing' | 'won' | 'lost';
 
 export interface Player {
   id: 'player' | 'ai';

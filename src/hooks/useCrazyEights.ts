@@ -14,15 +14,14 @@ export const useCrazyEights = () => {
   const [isDrawing, setIsDrawing] = useState(false);
 
   const startGame = () => {
+    setGameState('rules');
+  };
+
+  const confirmRules = () => {
     const newDeck = createDeck();
     const playerHand = newDeck.splice(0, 8);
     const aiHand = newDeck.splice(0, 8);
     const firstCard = newDeck.shift()!;
-    
-    // If first card is 8, return it and reshuffle (simple rule for now, or just let it be)
-    // Standard rule: if 8 is turned up, dealer (AI) picks suit. 
-    // Let's simplify: if 8, treat as regular 8 (suit matters) or just reshuffle.
-    // Let's just put it in discard. If it's 8, activeSuit is its suit.
     
     setDeck(newDeck);
     setPlayer({ id: 'player', hand: playerHand });
@@ -184,6 +183,7 @@ export const useCrazyEights = () => {
     activeSuit,
     message,
     startGame,
+    confirmRules,
     playerPlayCard,
     playerSelectSuit,
     playerDraw,

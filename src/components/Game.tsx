@@ -16,6 +16,7 @@ export const Game = () => {
     activeSuit,
     message,
     startGame,
+    confirmRules,
     playerPlayCard,
     playerSelectSuit,
     playerDraw,
@@ -64,6 +65,41 @@ export const Game = () => {
           >
             开始游戏
           </motion.button>
+        </motion.div>
+      </div>
+    );
+  }
+
+  if (gameState === 'rules') {
+    return (
+      <div className="min-h-screen bg-[#D8C3A5] flex flex-col items-center justify-center p-4 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E84A5F] via-[#D4B483] to-[#2B5F75]"></div>
+        
+        <motion.div 
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          className="bg-[#D4B483] p-8 rounded-3xl shadow-2xl border-4 border-[#8B4513] max-w-2xl w-full z-10 relative"
+        >
+          <h2 className="text-4xl font-bold text-[#2B5F75] mb-6 text-center font-calligraphy">游戏规则</h2>
+          
+          <div className="space-y-4 text-[#8B4513] text-xl font-calligraphy leading-relaxed">
+            <p><span className="font-bold text-[#E84A5F]">目标：</span> 最先出完手中的牌。</p>
+            <p><span className="font-bold text-[#E84A5F]">出牌：</span> 出一张与弃牌堆顶部牌 <span className="font-bold">花色</span> 或 <span className="font-bold">点数</span> 相同的牌。</p>
+            <p><span className="font-bold text-[#E84A5F]">疯狂 8 点：</span> <span className="font-bold">8</span> 是万能牌！你可以随时打出 8，并指定下一张牌的花色。</p>
+            <p><span className="font-bold text-[#E84A5F]">摸牌：</span> 如果无牌可出，点击牌堆摸一张牌。</p>
+            <p><span className="font-bold text-[#E84A5F]">胜利：</span> 击败 AI，逃离系统的控制！</p>
+          </div>
+
+          <div className="mt-8 flex justify-center">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={confirmRules}
+              className="px-10 py-3 bg-[#2B5F75] text-white text-xl font-bold rounded-full shadow-lg hover:bg-[#1A3C4A] transition-colors border-2 border-[#D4B483] font-calligraphy"
+            >
+              我明白了，开始挑战
+            </motion.button>
+          </div>
         </motion.div>
       </div>
     );
