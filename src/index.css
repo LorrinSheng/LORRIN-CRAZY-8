@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+TC:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif TC", serif;
+  --font-calligraphy: "Ma Shan Zheng", cursive;
+}
