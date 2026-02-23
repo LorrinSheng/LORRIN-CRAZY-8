@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Lorrin Crazy Eights
 
-# Run and deploy your AI Studio app
+A Dunhuang-styled Crazy Eights card game built with React, Tailwind CSS, and Framer Motion.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/54e4cdbc-6743-40b9-9941-565a8227c272
+- **Dunhuang Aesthetic**: Beautiful card designs inspired by Dunhuang murals.
+- **AI Opponent**: Play against a smart AI.
+- **Smooth Animations**: Powered by Framer Motion.
+- **Responsive Design**: Works on mobile and desktop.
 
-## Run Locally
+## Deployment to Vercel
 
-**Prerequisites:**  Node.js
+This project is ready to be deployed to Vercel.
 
+1.  **Push to GitHub**:
+    -   Initialize a git repository: `git init`
+    -   Add files: `git add .`
+    -   Commit: `git commit -m "Initial commit"`
+    -   Create a repository on GitHub.
+    -   Push your code: `git remote add origin <your-repo-url> && git push -u origin main`
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+2.  **Deploy on Vercel**:
+    -   Go to [Vercel](https://vercel.com).
+    -   Click "Add New Project".
+    -   Import your GitHub repository.
+    -   Vercel will automatically detect the Vite framework.
+    -   **Important**: Add your `GEMINI_API_KEY` in the "Environment Variables" section if you plan to use AI features that require it (though the current game logic runs client-side without API calls).
+    -   Click "Deploy".
+
+## Local Development
+
+1.  Install dependencies: `npm install`
+2.  Start the development server: `npm run dev`
+3.  Open `http://localhost:3000` in your browser.
+
+## License
+
+Apache-2.0

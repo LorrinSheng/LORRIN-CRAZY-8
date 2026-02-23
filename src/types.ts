@@ -1,19 +1,24 @@
-export type Suit = 'hearts' | 'diamonds' | 'clubs' | 'spades';
-export type Rank = 'A' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | 'J' | 'Q' | 'K';
+export type GameMode = 'classic' | 'time';
 
-export interface Card {
+export interface Block {
   id: string;
-  suit: Suit;
-  rank: Rank;
-  value: number; // 8 is special
+  value: number;
+  row: number;
+  col: number;
+  isRemoved?: boolean; // For animation
 }
 
-export type GameState = 'intro' | 'playing' | 'won' | 'lost';
-
-export interface Player {
-  id: 'player' | 'ai';
-  hand: Card[];
+export interface GameState {
+  grid: Block[];
+  targetNumber: number;
+  score: number;
+  status: 'menu' | 'playing' | 'gameover';
+  mode: GameMode;
+  selectedBlockIds: string[];
+  timeLeft: number; // For time mode
+  level: number;
 }
 
-export const SUITS: Suit[] = ['hearts', 'diamonds', 'clubs', 'spades'];
-export const RANKS: Rank[] = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+export const COLS = 5;
+export const ROWS = 8; // Visible rows, but grid can go higher logically (game over if > ROWS)
+export const BLOCK_SIZE = 60; // Base size for calculations
